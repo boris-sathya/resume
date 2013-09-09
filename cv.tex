@@ -1,0 +1,165 @@
+\documentclass{article}
+\usepackage{fullpage}
+\usepackage{amsmath}
+\usepackage{marvosym} % For cool symbols.
+\usepackage{hyperref}
+\usepackage{amssymb}
+\usepackage{url}
+\textheight=10in
+\pagestyle{empty}
+%\raggedbottom
+\raggedright
+
+%\renewcommand{\encodingdefault}{cg}
+%\renewcommand{\rmdefault}{lgrcmr}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+% DEFINITIONS FOR RESUME
+\newcommand{\area}[2]{\vspace*{-9pt} \begin{verse}\textbf{#1}   #2 \end{verse}  }
+\newcommand{\lineunder}{\vspace*{-8pt} \\ \hspace*{-18pt} \hrulefill \\}
+\newcommand{\header}[1]{{\hspace*{-15pt}\vspace*{6pt} \textsc{#1}} \vspace*{-6pt} \lineunder}
+\newcommand{\employer}[3]{{ \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }}
+\newcommand{\contact}[3]{
+\vspace*{-8pt}
+\begin{center}
+{\LARGE \scshape {#1}}\\
+#2 \lineunder
+#3
+\end{center}
+\vspace*{-8pt}
+}
+\newenvironment{achievements}{\begin{list}{$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}\end{list}}
+\newcommand{\schoolwithcourses}[5]{
+ \textbf{#1} #2 $\bullet$ #3\\
+ \textit{#4} \\
+#5 \\
+\vspace*{5pt}
+}
+\newcommand{\school}[4]{
+ \textbf{#1} #2 $\bullet$ #3\\
+#4 \\
+}
+
+% END RESUME DEFINITIONS
+
+\begin{document}
+
+\small
+\smallskip
+\vspace*{-44pt}
+
+\contact{Sathya Prakash.K}
+{c/o Sangeetha Venkatesan, Lgh:1603, Blendasgata 61, Hisings Backa - 422 51, Gothenburg, Sweden}
+{sathya@student.chalmers.se  $\bullet$ \url{http://static.boris.in/~sathya/} $\bullet$ https://github.com/boris-sathya}
+
+\header{Education}
+
+\schoolwithcourses{Chalmers University of Technology,} {Gothenburg, Sweden.}{Master of Science in Computer Systems and Networks., Autumn 2012 - Present}{Relevant Courses Taken: Fault Tolerant Computer Systems, Computer Networks, Operating Systems, Distributed Systems, Adv Distributed Systems, Computer Security, Network Security, Research Project on Security of AMI devices. }{GPA: 4.5/5.0}
+
+\schoolwithcourses{Anna University,}{Chennai, TN, India.}{Bachelor of Engineering in Electrical and Electronics Engg., 2011}
+{Relevant Courses Taken: Fundamentals of Computer Science, Data Structures and Algorithms, Object Oriented Programming with C++ and Java, Microprocessors and Microcontrollers.}
+{Percentage: 74.4}
+
+\schoolwithcourses{SVMHSS,}{Uthangarai, TN, India.}{Higher Secondary, 2007}
+{Major Subjects Taken: Maths, Physics, Chemistry.}
+{Percentage: 90.4}
+
+\header{Work History}
+
+\employer{Tradehero, Singapore}{June 2013 - August 2013}{Software Developer Intern}
+    \begin{achievements}
+    \item I worked on creating Fraud Detection Tools to prevent gaming the system.
+    \item I also worked on patching the TradeHero server code against critical security flaws
+    \end{achievements}
+	
+\employer{We Know IT, Gothenburg}{Nov 2012 - Present}{Consultant}
+    \begin{achievements}
+    \item Primary work invloves in Application Development according to the client requirements.
+	\item Secondary tasks range from aiding other consultants in Infrastructure design to migrating existing setup to a new environment. 
+    \end{achievements}
+
+\employer{Wipro Technologies, Chennai}{Oct 2011 - July 2012}{Project Engineer}
+    \begin{achievements}
+    \item Focused on UNIX Application Development.
+    \item Worked on Design and Development of a In-house Version Control System.
+    \end{achievements}
+
+\employer{Madtechsupport, Chennai}{Jun 2010 - Jul 2011}{Junior Systems Administrator at Abloy India}
+    \begin{achievements}
+    \item Responsible for Development and Maintenence of IT Infrastructure at Abloy India, Chennai.
+	\item Setup a Asterisk based PBX server for the Marketing Dept at Abloy India.
+	\item Implement and Manage rsync based backup for all host machines.
+    \end{achievements}
+
+\header{Skills}
+\begin{achievements}
+\item Proficiency of software development in Assembly, C, C++, C\#, Python, PHP, HTML.
+\item Databases: MySql, SQL Server, Sybase, MongoDB.
+\item Development Tools: bash, git, gdb, vim, visual studio.
+\item Familiarity with Threads, Sockets, \LaTeX.
+\item Platforms: UNIX, GNU/Linux, Win32.
+\item Hardware: Arduino, Beaglebone, Raspberry pi.
+\item Infrastructure Environments: Amazon AWS, Windows Azure, Virtualbox, Vmware ESXi.
+\item Infosec Tools: Metasploit Framework, Nmap, Wireshark, Aircrack-ng suite.
+\end{achievements}
+
+\header{Projects and Hacks}
+\begin{achievements}
+\item Worked on a research project to analyse security threats to Advanced Metering Infrastructure (Smart Meters), Developed a PoC exploit for a vendor specific application that runs on a smart meter, Designed a Test Bed to facilitate Reverse Engineering of smart meters.
+\item Implemented Round Robin Algorithm for CPU scheduling and Clock Algorithm for Memory Management in OSP environment.
+\item Contributed to the Development of a Search Engine KPP, As a part of Open Source Software Development Contest at Kurukshetra 2010, A UNESCO sponsored International Techno Management Fest at College of Engineering, Guindy.
+\item Pwning the BSNL users, A research project analysing the security issues in Indian Government ISP issued Broadband Routers, deviced various attack vectors and developed a patch for it.
+\item Boris-I-SMS, A Web Application utlizing gnokki communication interface for sending text messages through the Internet
+\item @panimalarbot, A twitterbot written in Python using twitter's Python API
+\end{achievements}
+\newpage
+\header{Talks and Publications}
+\begin{achievements}
+\item "Preventing SYN Flooding on Linux based Embedded Devices" at Interrupt'09, A symposium organized by ACE chapter of SVCE, Chennai, India.
+\item "Pwning the BSNL users" at Pragyan'10, A International Tech Fest organized by National Institute of Technology, Trichy.
+\item "Resource Monitoring on Virtual Machine Clusters", at IBM Techno challenge organized at College of Engineering Guindy, Chennai.
+\item "Pwning the BSNL users" a Whitepaper detailing the security implications of a BroadBand Modem cum Router in PacketStorm Security Portal.
+\end{achievements}
+
+\header{Honors and Awards}
+\begin{achievements}
+\item IPOET scholarship awarded by Chalmers University for the whole Master's Degree Program.
+\item Best Project Award at Wipro Technologies, for implementing a Version Control System as a part of the Training Programme.
+\item Judge's Winner Award at College of Engineering, Guindy for Securing the HITS Alogrithm during the development of a open source Search Engine KPP.
+\item Runner Up at IBM Techno Challenge for the research on "Resource Monitoring on Virtual Machine Clusters".
+\end{achievements}
+
+\header{Activities}
+\begin{achievements}
+\item Active member of OWASP (Chennai and Gothenburg Chapter)
+\item Member of Indian Honeynet Project.
+\item Member of NULL, A open security community based in India.
+\end{achievements}
+
+\header{Area of Interests}
+\begin{achievements}
+\item System Security
+\item Information and Application Security
+\item Operating Systems
+\end{achievements}
+
+\header{References}
+\begin{tabular}{lr}
+% Referee 1
+\begin{minipage}[t]{2.5in}
+Asst Prof.\ Magnus Almgren\\
+Chalmers University of Technology\\
+Gothenburg, Sweden\\
+\Letter\ \href{mailto:magnus.almgren@chalmers.se}{magnus.almgren\textrm{@}chalmers.se}
+\end{minipage}
+&
+% Referee 2
+\begin{minipage}[t]{2.5in}
+Asst Prof.\ Arulalan\\
+Head of EEE Department\\
+Panimalar Engineering College, India\\
+\Telefon\ +91-044-26490404\\
+\end{minipage}
+\end{tabular}
+\\
+\end{document}
